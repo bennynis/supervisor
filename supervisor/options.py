@@ -300,6 +300,7 @@ class Options:
                 if name and value is not None:
                     self._set(name, value, 1)
 
+        self.configfile = 'supervisord.conf'
         if self.configfile is None:
             uid = os.getuid()
             if uid == 0 and "supervisord" in self.progname: # pragma: no cover
